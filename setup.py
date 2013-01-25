@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1'
+version_file = os.path.join('on', 'caroufredsel', 'version.txt')
+version = open(version_file).read().strip()
 
 setup(name='on.caroufredsel',
       version=version,
@@ -14,11 +15,11 @@ setup(name='on.caroufredsel',
         "Framework :: Plone",
         "Programming Language :: Python",
         ],
-      keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
-      license='GPL',
+      keywords='Caroufredsel',
+      author='Toni Mueller',
+      author_email='support@oeko.net',
+      url='',
+      license='GPLv3',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['on'],
       include_package_data=True,
@@ -33,6 +34,11 @@ setup(name='on.caroufredsel',
       [z3c.autoinclude.plugin]
       target = plone
       """,
+      extras_require = {
+          'test': [
+              'plone.app.testing',
+          ]
+      },
       setup_requires=["PasteScript"],
       paster_plugins=["ZopeSkel"],
       )
