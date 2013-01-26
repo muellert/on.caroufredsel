@@ -7,7 +7,7 @@ version = open(version_file).read().strip()
 setup(name='on.caroufredsel',
       version=version,
       description="Shim to load Caroufredsel as a resource",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
@@ -39,6 +39,6 @@ setup(name='on.caroufredsel',
               'plone.app.testing',
           ]
       },
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
+      #setup_requires=["PasteScript"],
+      #paster_plugins=["ZopeSkel"],
       )
