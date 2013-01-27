@@ -29,14 +29,13 @@ from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
 
 
-import on.caroufredsel
 
 class OnCarouFredSelFixture(PloneSandboxLayer):
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
-        import on.video
-        self.loadZCML(package=on.video)
+	import on.caroufredsel
+        self.loadZCML(package=on.caroufredsel)
         self.loadZCML(package=Products.CMFPlone)
 
     def setUpPloneSite(self, portal):
