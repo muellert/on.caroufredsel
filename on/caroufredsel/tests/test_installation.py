@@ -26,4 +26,6 @@ class TestLibInRegistry(unittest.TestCase):
         tool = getToolByName(self.portal, "portal_javascripts")
         self.assertNotEqual(tool, None)
         installedScriptIds = tool.getResourceIds()
-        self.assertTrue("caroufredsel.js" in installedScriptIds, "caroufredsel.js")
+        #import pdb; pdb.set_trace()
+        self.assertTrue("++resource++on.caroufredsel.js" in installedScriptIds, "on.caroufredsel.js")
+        self.assertTrue("++resource++on.caroufredsel-compact.js" in installedScriptIds, "on.caroufredsel-compact.js")
