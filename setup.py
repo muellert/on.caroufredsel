@@ -8,18 +8,21 @@ setup(name='on.caroufredsel',
       version=version,
       description="Shim to load Caroufredsel as a resource",
       long_description=open("README.rst").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+                       open("CHANGES.rst").read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
         "Framework :: Plone",
+	"Framework :: Plone :: 4.2",
+	"Framework :: Plone :: 4.3",
         "Programming Language :: Python",
+        "Programming Language :: JavaScript",
         ],
       keywords='Caroufredsel',
       author='Toni Mueller',
       author_email='support@oeko.net',
-      url='',
-      license='GPLv3',
+      url='https://github.com/muellert/on.caroufredsel.git',
+      license='MIT + GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['on'],
       include_package_data=True,
@@ -39,6 +42,4 @@ setup(name='on.caroufredsel',
               'plone.app.testing',
           ]
       },
-      #setup_requires=["PasteScript"],
-      #paster_plugins=["ZopeSkel"],
       )
