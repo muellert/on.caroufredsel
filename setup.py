@@ -27,6 +27,7 @@ setup(name='on.caroufredsel',
       namespace_packages=['on'],
       include_package_data=True,
       zip_safe=False,
+      setup_requires=['setuptools-git'],
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
